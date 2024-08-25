@@ -1,0 +1,162 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 5px; /* Ajusta el padding para que el contenido no quede oculto bajo la navbar */
+}
+
+/* Navbar fija */
+.navbar.fixed-top {
+    position: fixed; /* Fija la navbar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la navbar esté por encima de otros elementos */
+}
+
+/* Secciones */
+section {
+    padding: 20px 0;
+}
+
+/* Títulos de secciones */
+h1, h2 {
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sobre mí */
+#about p {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Habilidades */
+#skills ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.skill-item {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Proyectos */
+#projects .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#projects .card:hover {
+    transform: scale(1.05);
+    max-height: 100%;
+}
+
+#projects .card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Formulario de contacto */
+#contactForm .form-label {
+    font-weight: bold;
+}
+
+#contactForm input, #contactForm textarea {
+    border-radius: 5px;
+}
+
+#contactForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .skill-item {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #projects .card {
+        margin-bottom: 20px;
+    }
+}
+
+p {
+    text-align: justify;
+}
+/* Centrar las tarjetas */
+#projects .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#projects .col-md-4 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo del párrafo de "Sobre mí" */
+#about p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    
+    max-height: 200px; /* Altura máxima inicial que mostrará la mitad del texto */
+    overflow: hidden; /* Oculta el resto del contenido */
+    position: relative;
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* Mostrar el texto completo al pasar el mouse */
+#about p:hover {
+    max-height: 1000px; /* Aumenta la altura para mostrar todo el contenido */
+}
+footer a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
